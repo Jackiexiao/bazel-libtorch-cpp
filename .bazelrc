@@ -1,0 +1,10 @@
+build --cxxopt='-std=c++14'
+
+# We need this to be compatible with libtorch
+build --cxxopt='-D_GLIBCXX_USE_CXX11_ABI=0'
+
+# Always optimize
+build --copt='-O3'
+
+# Print out errors on test failures
+test --test_output=errors
